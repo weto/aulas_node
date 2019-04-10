@@ -1,9 +1,10 @@
-# aulas_node
+# Anotações das Aulas de Node
 
-# Aula 2
+# Aula 2 09/04/2019
 PROCESS // VARIAVEL DE AMBIENTE DO NODE
 
 chalk // Colocar estilo no console
+instalar com npm
 
 O QUE É YARGS?
 
