@@ -1,6 +1,6 @@
 # Anotações das Aulas de Node
 
-# Aula 2 09/04/2019
+# Aula 2 - 09/04/2019
 PROCESS // VARIAVEL DE AMBIENTE DO NODE
 
 chalk // Colocar estilo no console
