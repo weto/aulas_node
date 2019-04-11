@@ -1,6 +1,6 @@
 # CRUD de Tarefas
 ## Rodando a aplicação
-- Clonar o repositório
+- Clonar o repositório https://github.com/weto/aulas_node.git
 - Entrar no diretório todoList
 - Instalar as dependências do projeto através do comando 'npm install'
 
