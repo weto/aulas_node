@@ -15,7 +15,7 @@ O QUE É YARGS?
 2 - Yargs command, describe , builder (descrição de atributos, describe, type, demandOption), handler, parse
 
 Desafio:
-Objeto tasks.json: Pessoa (name, description)
+Objeto tasks.json: Task (name, description)
 Criar todoList.js com CLI,
 1 - Add, Remove, List, ListAll, Load
 
