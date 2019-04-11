@@ -1,4 +1,8 @@
 # CRUD de Tarefas
+## Rodando a aplicação
+1 - Clonar o repositório
+2 - Entrar no diretório todoList
+3 - Instalar as dependências do projeto através do comando 'npm install'
 
 ## Buscando todas tarefas
 node app.js get
