@@ -44,9 +44,26 @@ const edit = (data) => {
     try {
         const taskFind = getByName(data)
         if(taskFind) {
-            
+            const taskAll = load()
+            taskAll.map(taskItem => {
+                if(taskItem.name === data.name) {
+                    taskItem.description = data.description;
+                }
+            })
+            fs.writeFileSync(PATH,JSON.stringify(taskAll))
         }
-        
+    } catch(err) {
+        return null
+    }
+}
+
+const deleted = (data) => {
+    try {
+        const taskAll = load()
+        _.remove(taskAll, (task) => {
+            return task.name === data.name;
+        });
+        fs.writeFileSync(PATH,JSON.stringify(taskAll))
     } catch(err) {
         return null
     }
@@ -55,5 +72,7 @@ const edit = (data) => {
 module.exports = {
     get,
     getByName,
-    add
+    add,
+    edit,
+    deleted
 }

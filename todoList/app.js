@@ -1,6 +1,6 @@
 const yargs = require('yargs')
 const chalk = require('chalk')
-const { get, add, getByName } = require('./Task')
+const { get, getByName, add, edit, deleted } = require('./Task')
 
 yargs.command({
     command: 'get',
@@ -73,6 +73,51 @@ yargs.command({
         }
         add(task);
         console.log(chalk.green('Task add success'));
+    }
+});
+
+yargs.command({
+    command: 'edit',
+    describe: 'edit a task',
+    builder: {
+        name: {
+            describe: 'edit a name task',
+            demandOption:true,
+            type:'string'
+        },
+        description: {
+            describe: 'edit a description task',
+            type:'string',
+            demandOption:true,
+        }
+    },
+    handler:(args) => {
+        const task = {
+            name: args.name,
+            description: args.description
+        }
+        edit(task);
+        console.log(chalk.green('Task edit success'));
+    }
+});
+
+yargs.command({
+    command: 'deleted',
+    describe: 'delete a task',
+    builder: {
+        name: {
+            describe: 'delete a name task',
+            demandOption:true,
+            type:'string'
+        },
+    },
+    handler:(args) => {
+        const task = {
+            name: args.name,
+            description: args.description
+        }
+        deleted(task);
+        console.log(chalk.green('Task delete success'));
     }
 });
 
