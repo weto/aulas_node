@@ -17,7 +17,11 @@ yargs.command({
             company: args.company
         }
         console.log(chalk.green('Result:'));
-        console.log(service(price));
+        service(price, (data) => {
+            console.log(chalk.green.bold.inverse(data.symbol))
+            console.log(chalk.red.bold(`Menor valor do dia: ${data.day_low}`))
+            console.log(chalk.blue.bold(`Fechamento: ${data.price}`))
+        })
     }
 });
 
