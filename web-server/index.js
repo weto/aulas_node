@@ -1,6 +1,7 @@
 const express = require('express')
 const hbs = require('hbs')
 const path = require('path')
+const utils = require('./utils')
 const app = express()
 const port = 3000
 
@@ -10,7 +11,7 @@ const partialsPath = path.join(__dirname, '/templates/partials')
 app.set('view engine', 'hbs')
 app.use(express.static('public'))
 app.set('views', partialsView)
-/hbs.registerPartials(partialsPath)
+    / hbs.registerPartials(partialsPath)
 
 app.get('/', (req, res) => {
     res.render('index', {
@@ -34,9 +35,13 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/cotacoes/:name', (req, res) => {
-    res.render('help', {
-        title: 'help',
-        author: 'Wellington'
+    const { name } = req.params
+    utils.service({ name }, (data) => {
+        res.render('cotacao', {
+            title: 'cotações',
+            data: data,
+            author: 'Wellington'
+        })
     })
 })
 
