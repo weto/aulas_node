@@ -1,0 +1,7 @@
+Criar a aplicação de contação no node
+1 - /
+2 - /sobre
+3 - /help
+4 - /cotacoes (receber nome da empresa e fazer requisição na api worldtradingdata)
+
+definir hbs.registerPartials para definir outro diretório da views. (app.set('views'))
