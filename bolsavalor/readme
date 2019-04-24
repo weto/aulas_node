@@ -1,3 +1,6 @@
-publicando cli:
+##publicando cli:
 criar diretorio bin
 dar permissão de chmod a+x bin/cotacoes.js
+
+## Rodando a aplicação
+node app.js get --company 'PETR4.SA'
