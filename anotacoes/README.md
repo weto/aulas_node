@@ -33,5 +33,6 @@ debugger - (add debugger no código)
 
 Exemplo:
 node --inspect-brk task.js
+URL Debug: chrome://inspect
 
 # Processos Async
